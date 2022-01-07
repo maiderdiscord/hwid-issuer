@@ -23,9 +23,7 @@ func main() {
 	fmt.Print("ライセンスキー >> ")
 
 	scanner := bufio.NewScanner(os.Stdin)
-	if os.Getenv("DEBUG") == "true" {
-		scanner.Scan()
-	}
+	scanner.Scan()
 	licenseKey := scanner.Text()
 
 	token, err := getToken(licenseKey)
